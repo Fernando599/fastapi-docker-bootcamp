@@ -38,9 +38,9 @@ uvicorn app.main:app --reload
 
 ## Endpoints
 
-## Criar tarefa
+### Criar tarefa
 
-**POST** `/todos/`
+- **POST** `/todos/`
 
 **Body exemplo:**
 ```json
@@ -51,33 +51,29 @@ uvicorn app.main:app --reload
 }
 ```
 
-**curl:**
+**Exemplo curl:**
 ```bash
 curl -X POST "http://localhost:8000/todos/" \
   -H "Content-Type: application/json" \
   -d '{"title": "Estudar FastAPI", "description": "Completar bootcamp", "completed": false}'
 ```
 
----
+### Listar tarefas
 
-## Listar tarefas
-
-**GET** `/todos/?skip=0&limit=100`
-
-**curl:**
+- **GET** `/todos/?skip=0&limit=100`
+- **Suporta query params:** `skip` (>=0), `limit` (1-1000)
 ```bash
 curl "http://localhost:8000/todos/?skip=0&limit=100"
 ```
 
----
-
-## Buscar tarefa por ID
+### Buscar tarefa por ID
 
 - **GET** `/todos/{id}`
+```bash
+curl "http://localhost:8000/todos/1"
+```
   
----
-
-## Atualizar tarefa
+### Atualizar tarefa
 - **PUT** `/todos/{id}`
 
 **Body parcial ou total:**
@@ -87,30 +83,23 @@ curl "http://localhost:8000/todos/?skip=0&limit=100"
   "completed": true
 }
 ```
-**curl:**
 ```bash
 curl -X PUT "http://localhost:8000/todos/1" \
  -H "Content-Type: application/json" \
  -d '{"completed": true}'
 ```
 
----
-
-## Deletar tarefa
+### Deletar tarefa
 
 **DELETE** `/todos/{id}`
 ```bash
 curl -X DELETE "http://localhost:8000/todos/1"
 ```
 
----
-
 ## Testes
 ```bash
 pytest -v
 ```
-
----
 
 ## Estrutura do Projeto
 ```txt
@@ -129,14 +118,10 @@ app/
 - Mensagens de erro estão em PT-BR e usam os status HTTP corretos (201, 404, 422, 204).
 - Para persistência real, troque o banco em memória por um banco SQL (SQLite/PostgreSQL).
 
----
-
-## Roadmap (Futuro)
+## Roadmap
 - Persistência com banco de dados
 - Autenticação e autorização (JWT)
 - Paginação e filtros avançados
-
----
 
 ## Contribuição
 **1.** Faça um fork do repositório
