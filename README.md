@@ -138,8 +138,15 @@ git commit -m "feat: minha feature"
 ```bash
 git push origin feat/minha-feature
 ```
-<<<<<<< HEAD
 **5.** Abra um Pull Request.
-=======
-**5.** Abra um Pull Request.
->>>>>>> origin/feat/readme-melhorado
+- Faça fork e branch
+- Crie issues para sugestões e bugs
+- Combine atividades via issues ou discussões
+## Participantes
+Adicione seu nome na lista conforme contribuir!
+
+https://github.com/Jcnok
+
+https://github.com/goncasthiago
+
+https://github.com/Fernando599
