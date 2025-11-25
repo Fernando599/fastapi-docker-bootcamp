@@ -138,4 +138,8 @@ git commit -m "feat: minha feature"
 ```bash
 git push origin feat/minha-feature
 ```
+<<<<<<< HEAD
 **5.** Abra um Pull Request.
+=======
+**5.** Abra um Pull Request.
+>>>>>>> origin/feat/readme-melhorado
